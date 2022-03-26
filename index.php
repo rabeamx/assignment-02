@@ -15,9 +15,13 @@ include_once "./timeline.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Structure</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome/css/all.css">
+	<link rel="stylesheet" href="assets/fonts/themufy/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+
 
     <div class="container">
         <div class="row">
@@ -57,11 +61,75 @@ include_once "./timeline.php";
             </div>
             <?php endforeach; ?>
 
-
         </div>
     </div>
 
-    
-    
+    <section class="profile-mein-content">
+		<div class="container">
+			<div class="row">
+                
+            <div class="col-md-7">
+
+					<br>
+
+					<div class="all-post-area">
+						
+                        <?php foreach($posts as $post) : ?>
+
+						<div class="user-post-panel">
+							<div class="card shadow-sm">
+								<div class="card-body">
+									<div class="post-header clearfix">
+										<img src=" <?php $post['photo']; ?> " alt="">
+										<div class="post-user-info">
+											<h4><a href="#"> <?php $post['name']; ?> </a></h4>
+											<p> <?php $post['time']; ?> <i class="fas fa-globe-americas"></i></p>
+										</div>
+										<a class="float-right" href="#"><i class="fas fa-ellipsis-h"></i></a>
+									</div>
+									<div class="post-content mt-2">
+										<p> <?php $post['desc']; ?></p>
+										<img src=" <?php $post['image']; ?> " alt="">
+									</div>
+									<hr>
+									<div class="post-likes clearfix">
+										<div class="like float-left">
+											<img src=" <?php $post['like']; ?> " alt=""> 320
+										</div>
+										<div class="comment float-right">
+                                        <?php $post['comment']; ?>
+										</div>
+									</div>
+									<hr>
+									<div class="post-like-comment-share">
+										<ul>
+											<li><a href="#"><i class="far fa-thumbs-up"></i> Like</a></li>
+											<li><a href="#"><i class="far fa-comment-alt"></i> Comment</a></li>
+											<li><a href="#"><i class="fas fa-share"></i> Share</a></li>
+										</ul>
+									</div>
+									<hr>
+
+									
+									
+									
+
+								</div>
+							</div>
+						</div>
+                        
+                        <?php endforeach ; ?>
+
+					</div>
+
+			</div>
+            
+			</div>
+             
+		</div>
+	</section>
+
+
+
 </body>
 </html>
