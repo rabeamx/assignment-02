@@ -67,6 +67,7 @@ include_once "./timeline.php";
     <section class="profile-mein-content">
 		<div class="container">
 			<div class="row">
+            <h1 style = "text-align:center; padding-bottom:20px; font-weight:bold;">Timeline</h1>
                 
             <div class="col-md-7">
 
