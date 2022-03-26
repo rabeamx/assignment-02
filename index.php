@@ -80,24 +80,24 @@ include_once "./timeline.php";
 							<div class="card shadow-sm">
 								<div class="card-body">
 									<div class="post-header clearfix">
-										<img src=" <?php $post['photo']; ?> " alt="">
+										<img src=" <?php echo $post['photo']; ?> " alt="">
 										<div class="post-user-info">
-											<h4><a href="#"> <?php $post['name']; ?> </a></h4>
-											<p> <?php $post['time']; ?> <i class="fas fa-globe-americas"></i></p>
+											<h4><a href="#"> <?php echo $post['name']; ?> </a></h4>
+											<p> <?php echo $post['time']; ?> <i class="fas fa-globe-americas"></i></p>
 										</div>
 										<a class="float-right" href="#"><i class="fas fa-ellipsis-h"></i></a>
 									</div>
 									<div class="post-content mt-2">
-										<p> <?php $post['desc']; ?></p>
-										<img src=" <?php $post['image']; ?> " alt="">
+										<p> <?php echo $post['desc']; ?></p>
+										<img src=" <?php echo $post['image']; ?> " alt="">
 									</div>
 									<hr>
 									<div class="post-likes clearfix">
 										<div class="like float-left">
-											<img src=" <?php $post['like']; ?> " alt=""> 320
+											<img src="https://pngimg.com/uploads/like/like_PNG14.png" alt=""> <?php echo $post['like']; ?>
 										</div>
 										<div class="comment float-right">
-                                        <?php $post['comment']; ?>
+                                        <img src="https://www.iconpacks.net/icons/1/free-mail-icon-142-thumb.png" alt=""> <?php echo $post['comment']; ?>
 										</div>
 									</div>
 									<hr>
